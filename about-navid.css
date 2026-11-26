@@ -1,0 +1,235 @@
+/* NAVID GROUP — ABOUT NAVID | Editorial Experience V3
+   Scoped to this page only. Existing home, NAV's and PCB&T remain unchanged. */
+.about-premium-page{background:#090b0d;color:#eeeae5;--cream:#edeae3;--sand:#c9bba0;--soft:#a5a7a7;--hair:rgba(235,234,227,.16)}
+.about-premium-page .masthead{background:rgba(9,11,13,.97);border-bottom-color:rgba(255,255,255,.11)}
+.about-premium-page .masthead-link{color:#e1ded8}.about-premium-page .masthead-link:hover{color:#fff}
+.about-skip{position:fixed;z-index:100;top:-100px;left:12px;background:#eee;color:#111;padding:12px 16px}.about-skip:focus{top:12px}
+.about-top-nav{display:flex;align-items:center;gap:clamp(20px,3vw,48px);position:absolute;left:50%;transform:translateX(-50%)}
+.about-top-nav a{font-size:12px;color:#b9b8b5;transition:color .25s ease;position:relative}
+.about-top-nav a::after{content:'';position:absolute;left:0;right:100%;bottom:-10px;height:1px;background:#ccbea2;transition:right .35s ease}.about-top-nav a:hover{color:#fff}.about-top-nav a:hover::after{right:0}
+.navid-shell{width:min(100% - 9vw,1560px);margin-inline:auto}
+.navid-section-index{font-family:inherit;font-size:10px;font-weight:600;letter-spacing:.23em;color:#b5a788;white-space:nowrap}
+.navid-hero{min-height:min(820px,calc(100svh - 89px));max-width:1920px;margin:auto;position:relative;display:grid;grid-template-columns:54% 46%;isolation:isolate;overflow:hidden;border-bottom:1px solid var(--hair)}
+.navid-hero::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 39% 52% at 77% 58%,rgba(121,127,132,.12),transparent 80%),radial-gradient(ellipse 42% 34% at 3% 12%,rgba(49,62,67,.13),transparent 70%);z-index:-1}
+.navid-hero-gridlines{position:absolute;inset:0;pointer-events:none;background:linear-gradient(90deg,transparent 53.9%,rgba(255,255,255,.085) 54%,transparent 54.1%),linear-gradient(180deg,transparent 89%,rgba(255,255,255,.055) 89.05%,transparent 89.15%);z-index:0}
+.navid-hero-copy{z-index:3;padding:clamp(66px,6.7vw,117px) 1vw 85px max(4.5vw,calc((100vw - 1560px)/2));display:flex;flex-direction:column;align-items:flex-start;justify-content:center}
+.navid-eyebrow{font-size:10px;letter-spacing:.23em;color:#d0c8b6;display:flex;align-items:center;gap:12px;flex-wrap:wrap;max-width:660px;margin:0 0 44px}
+.navid-kicker-line{width:24px;height:1px;background:#a68d65}.navid-eyebrow-location{color:#858c8b;margin-left:6px;letter-spacing:.12em}
+.navid-hero h1{font-size:clamp(60px,6.35vw,116px);font-weight:350;letter-spacing:-.083em;line-height:.97;margin:0 0 37px;max-width:930px;white-space:nowrap}
+.navid-hero h1 em{color:#aeb4b4;font-weight:300;font-style:normal}
+.navid-hero-lead{font-size:clamp(16px,1.45vw,22px);letter-spacing:-.02em;line-height:1.6;color:#b9bdbd;max-width:530px;font-weight:350;margin:0 0 38px}
+.navid-text-link{font-size:13px;border-bottom:1px solid rgba(235,235,232,.55);padding:0 0 14px;display:inline-flex;gap:30px;align-items:center;color:#e6e3dc;transition:gap .4s,color .3s}.navid-text-link:hover{gap:44px;color:#fff}
+.navid-hero-bottom{display:flex;align-items:center;gap:16px;margin-top:80px;font-size:9px;letter-spacing:.21em;color:#878c90;white-space:nowrap}.navid-star{color:#b6a278;font-size:12px}
+.navid-hero-visual{position:relative;isolation:isolate;min-height:730px;overflow:hidden}
+.navid-hero-visual::after{content:'';position:absolute;inset:auto 9% 0 11%;height:17%;background:radial-gradient(ellipse at center,rgba(0,0,0,.9),transparent 70%);pointer-events:none;z-index:1}
+.navid-hero-backtype{position:absolute;top:14%;left:15%;font-size:clamp(260px,38vw,690px);line-height:1;font-weight:200;letter-spacing:-.13em;color:rgba(226,229,221,.024);font-family:Georgia,serif;user-select:none;z-index:0}
+.navid-hero-orbit{position:absolute;top:4%;left:4%;width:min(78%,720px);aspect-ratio:1;border:1px solid rgba(204,187,151,.11);border-radius:50%;transform:rotate(-21deg);pointer-events:none;z-index:0}
+.navid-hero-orbit::before{content:'';position:absolute;inset:13%;border:1px solid rgba(225,229,224,.05);border-radius:50%}
+.navid-portrait{position:absolute;bottom:-8px;left:50%;transform:translateX(-47%);height:95%;max-height:890px;width:auto;max-width:none;object-fit:contain;z-index:2;filter:drop-shadow(0 30px 60px rgba(0,0,0,.55));animation:navidEntrance 1.2s cubic-bezier(.22,1,.36,1) both}
+.navid-portrait-caption{z-index:3;position:absolute;right:6.5%;bottom:34px;display:flex;gap:14px;align-items:center;color:#c9c9c5;letter-spacing:.17em;font-size:9px}.navid-portrait-caption span:first-child{color:#a38f71}
+.navid-scroll-cue{position:absolute;left:50%;transform:translateX(-50%);bottom:18px;z-index:6;font-size:9px;letter-spacing:.19em;color:#9b9e9f;display:flex;gap:22px;align-items:center;opacity:.85}
+.navid-scroll-cue>span:last-child{font-size:16px;animation:navidArrow 2s ease-in-out infinite}
+@keyframes navidEntrance{from{opacity:0;transform:translate(-47%,25px)}to{opacity:1;transform:translate(-47%,0)}}
+@keyframes navidArrow{0%,100%{transform:translateY(-2px)}50%{transform:translateY(4px)}}
+/* Section 1, editorial light */
+.navid-story{background:#efeee9;color:#172024;padding:clamp(100px,10vw,160px) 0}
+.navid-story-grid{display:grid;grid-template-columns:.35fr 1fr;gap:clamp(45px,9vw,160px)}
+.navid-story .navid-section-index{color:#7d7463}.navid-story-side{display:flex;flex-direction:column;justify-content:space-between}
+.navid-rule-art{height:280px;position:relative;display:flex;align-items:center;gap:17px;opacity:.65}
+.navid-rule-art span{height:100%;width:1px;background:linear-gradient(#9a907b,transparent);transform-origin:top;transform:rotate(24deg)}.navid-rule-art span:nth-child(2){height:80%;opacity:.65}.navid-rule-art span:nth-child(3){height:60%;opacity:.4}
+.navid-aside-note{font-size:9px;letter-spacing:.19em;color:#88857b;line-height:1.9}
+.navid-story h2,.navid-section-intro h2,.navid-foundation h2,.navid-philosophy h2,.navid-contact h2{font-weight:350;font-size:clamp(48px,5.15vw,90px);line-height:1.06;letter-spacing:-.073em;margin:0}
+.navid-story h2 em,.navid-section-intro h2 em,.navid-foundation h2 em,.navid-philosophy h2 em,.navid-contact h2 em{font-family:Georgia,serif;font-weight:400;font-style:italic;letter-spacing:-.065em}
+.navid-story-body{margin-top:65px;max-width:890px;display:grid;grid-template-columns:1fr 1fr;gap:22px 55px}
+.navid-story-body p{font-size:16px;line-height:1.9;color:#5a6365;margin:0}.navid-story-body .navid-story-first{font-size:clamp(20px,2vw,30px);grid-column:1/-1;line-height:1.5;color:#243034;max-width:760px;letter-spacing:-.025em}
+.navid-story-body strong{font-weight:600;color:#20292c}
+.navid-principles{display:flex;gap:0;margin-top:66px;border-top:1px solid #c5c8c3;border-bottom:1px solid #c5c8c3}
+.navid-principles span{flex:1;text-align:center;padding:22px 10px;font-size:10px;font-weight:600;letter-spacing:.19em;border-right:1px solid #c5c8c3}.navid-principles span:first-child{text-align:left}.navid-principles span:last-child{border-right:0;text-align:right}
+/* Section 2 businesses */
+.navid-businesses{background:#0b0d0f;padding:clamp(105px,10vw,168px) 0 140px}
+.navid-intro-row{display:grid;grid-template-columns:1.5fr .5fr;gap:40px;align-items:end;margin:33px 0 65px}.navid-section-intro h2{font-size:clamp(50px,5.5vw,97px)}
+.navid-section-intro h2 em{color:#adb3b2}.navid-intro-row>p{font-size:16px;line-height:1.8;color:#a7b0b1;max-width:350px;margin:0 0 7px}
+.navid-business-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.navid-business-card{position:relative;display:flex;flex-direction:column;min-height:650px;padding:32px 38px 35px;background:#11171a;border:1px solid rgba(230,234,230,.12);overflow:hidden;transition:border-color .35s,transform .5s cubic-bezier(.2,1,.2,1),box-shadow .5s;isolation:isolate}
+.navid-business-card::before{content:'';position:absolute;inset:0;z-index:-1;opacity:0;transition:opacity .5s;background:radial-gradient(ellipse at 70% 30%,rgba(143,161,161,.16),transparent 68%)}.navid-business-card:hover{transform:translateY(-6px);border-color:rgba(218,210,193,.45);box-shadow:0 32px 70px rgba(0,0,0,.25)}.navid-business-card:hover::before{opacity:1}
+.navid-card-property{background:linear-gradient(145deg,#1d2122,#111516 65%)}.navid-card-finance{background:linear-gradient(145deg,#13242b,#0c171c 70%)}
+.navid-card-top{display:flex;justify-content:space-between;align-items:center;font-size:10px;letter-spacing:.2em;color:#bbc0bf}.navid-card-arrow{font-size:23px;line-height:1;transition:transform .3s}.navid-business-card:hover .navid-card-arrow{transform:translate(3px,-3px)}
+.navid-brandmark{height:265px;display:flex;align-items:center;justify-content:center}.navid-brandmark img{max-width:70%;max-height:200px;object-fit:contain;transition:transform .65s cubic-bezier(.22,1,.36,1);filter:drop-shadow(0 15px 35px rgba(0,0,0,.15))}.navid-card-property .navid-brandmark img{max-width:73%;max-height:220px}.navid-card-finance .navid-brandmark img{max-width:54%;max-height:190px}
+.navid-business-card:hover .navid-brandmark img{transform:scale(1.04)}
+.navid-card-bottom{margin-top:auto;border-top:1px solid rgba(255,255,255,.18);padding-top:26px}.navid-card-category{display:block;color:#aeb5b5;font-size:9px;letter-spacing:.17em;line-height:1.6}.navid-card-bottom h3{font-weight:350;line-height:1.03;letter-spacing:-.058em;font-size:clamp(37px,3.1vw,58px);margin:18px 0}.navid-card-bottom h3 em{font-family:Georgia,serif;color:#c2c4be;font-weight:400}
+.navid-card-bottom p{font-size:14px;color:#abb2b4;line-height:1.75;max-width:560px;margin:0 0 30px}.navid-card-explore{display:inline-flex;align-items:center;gap:22px;padding-bottom:9px;border-bottom:1px solid #bcbab4;color:#e6e4dd;font-size:12px}
+/* Foundation */
+.navid-foundation{background:#141a1d;padding:clamp(115px,9vw,150px) 0;border-block:1px solid rgba(255,255,255,.08)}
+.navid-foundation-grid{display:grid;grid-template-columns:1fr 1fr;gap:clamp(55px,9vw,160px)}.navid-foundation-title h2{margin:30px 0 28px;font-size:clamp(50px,4.55vw,78px)}.navid-foundation-title h2 em{color:#bdc1bf}
+.navid-foundation-title>p{font-size:16px;line-height:1.9;color:#aeb4b4;max-width:550px;margin:0}
+.navid-credentials{border-top:1px solid rgba(255,255,255,.2)}.navid-credential{display:grid;grid-template-columns:1fr auto;gap:13px 30px;padding:27px 0;border-bottom:1px solid rgba(255,255,255,.17)}.navid-credential-tag{grid-column:1/-1;font-size:9px;letter-spacing:.23em;color:#aa9777}.navid-credential h3{font-size:20px;font-weight:400;letter-spacing:-.03em;margin:0 0 8px}.navid-credential p{font-size:13px;line-height:1.55;color:#9da6a8;margin:0}.navid-credential-note{font-size:12px;color:#bdc0bc}
+/* Principles - minimal text */
+.navid-philosophy{background:#eeeeea;color:#172126;padding:clamp(110px,10vw,160px) 0}.navid-philosophy .navid-section-index{color:#857865}
+.navid-philosophy h2{margin:30px 0 84px;max-width:970px}.navid-philosophy h2 em{color:#60686b}.navid-philosophy-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:35px}
+.navid-philosophy-grid>div{border-top:1px solid #adb6b5;padding-top:24px}.navid-philosophy-grid>div>span{font-size:11px;color:#8b7c66}.navid-philosophy-grid h3{font-size:32px;font-weight:400;letter-spacing:-.06em;margin:35px 0 16px}.navid-philosophy-grid p{font-size:15px;color:#596669;line-height:1.85;max-width:360px;margin:0}
+/* Final CTA */
+.navid-contact{min-height:700px;position:relative;padding:clamp(112px,11vw,180px) 0;background:radial-gradient(ellipse 58% 75% at 50% 45%,#1b2529,#080b0d 70%);overflow:hidden;text-align:center;isolation:isolate}
+.navid-contact-orbit{position:absolute;left:50%;top:50%;width:min(80vw,800px);aspect-ratio:1;transform:translate(-50%,-50%) rotate(-24deg);border:1px solid rgba(226,225,215,.06);border-radius:50%;pointer-events:none;z-index:-1}.navid-contact-orbit::before{content:'';position:absolute;inset:18%;border:1px solid rgba(219,218,207,.07);border-radius:50%}
+.navid-contact-inner{display:flex;align-items:center;flex-direction:column}.navid-contact h2{margin:34px 0 28px;font-size:clamp(54px,6.4vw,108px)}.navid-contact h2 em{color:#adb5b5}
+.navid-contact-inner>p{font-size:16px;line-height:1.75;max-width:570px;color:#b6bbba;margin:0 auto 39px}.navid-contact-actions{display:flex;justify-content:center;flex-wrap:wrap;gap:13px}
+.navid-pill{background:#e9e8e4;color:#11191b;display:inline-flex;align-items:center;gap:30px;padding:18px 25px;font-size:13px;border-radius:100px;transition:background .3s,transform .3s}.navid-pill:hover{background:#fff;transform:translateY(-3px)}.navid-pill-outline{background:transparent;color:#e1e2df;border:1px solid rgba(255,255,255,.36)}.navid-pill-outline:hover{background:rgba(255,255,255,.08)}
+.navid-contact-phone{display:flex;align-items:center;gap:22px;margin-top:60px}.navid-contact-phone span{font-size:9px;letter-spacing:.22em;color:#929c9e}.navid-contact-phone a{font-size:16px;border-bottom:1px solid rgba(255,255,255,.35);padding-bottom:6px}
+.navid-about-footer{background:#090b0d}
+/* Reveal animation: only hidden when JS explicitly toggles class */
+.js-enhanced .about-premium-page [data-reveal]{opacity:0;transform:translateY(22px);transition:opacity .95s cubic-bezier(.22,1,.36,1),transform .95s cubic-bezier(.22,1,.36,1)}
+.js-enhanced .about-premium-page [data-reveal].is-visible{opacity:1;transform:translateY(0)}
+@media (max-width:1200px){.navid-hero{grid-template-columns:57% 43%}.navid-hero h1{font-size:clamp(56px,6.3vw,83px)}.navid-hero-copy{padding-left:4.5vw}.navid-hero-visual{min-height:680px}.navid-hero-bottom{margin-top:50px}.navid-intro-row{grid-template-columns:1.15fr .85fr}}
+@media (max-width:900px){.about-top-nav{display:none}.navid-hero{grid-template-columns:1fr 1fr}.navid-hero-copy{padding-right:2vw}.navid-hero h1{font-size:clamp(50px,6.2vw,68px)}.navid-hero-lead{font-size:16px}.navid-hero-visual{min-height:640px}.navid-story-grid{grid-template-columns:1fr;gap:30px}.navid-story-side{display:block}.navid-rule-art,.navid-aside-note{display:none}.navid-story-body{margin-top:40px}.navid-business-card{padding:25px;min-height:640px}.navid-businesses{padding-bottom:100px}.navid-foundation-grid{gap:50px}.navid-credential h3{font-size:18px}}
+@media (max-width:760px){
+  .navid-shell{width:calc(100% - 42px)}
+  .about-premium-page .masthead{height:70px;padding:0 20px}
+  .navid-hero{display:flex;flex-direction:column;min-height:auto}
+  .navid-hero-copy{padding:60px 24px 0;text-align:center;align-items:center}
+  .navid-eyebrow{justify-content:center;gap:9px;margin-bottom:25px;font-size:8px;letter-spacing:.14em;max-width:340px}.navid-eyebrow-location{display:none}.navid-kicker-line{width:18px}
+  .navid-hero h1{font-size:clamp(48px,11.6vw,72px);white-space:normal;letter-spacing:-.069em;line-height:.99;margin-bottom:22px}
+  .navid-hero-lead{font-size:14px;line-height:1.65;max-width:430px;margin-bottom:28px}
+  .navid-text-link{font-size:12px}.navid-hero-bottom{margin-top:37px;font-size:8px;gap:10px;letter-spacing:.13em}
+  .navid-hero-visual{width:100%;min-height:490px;height:clamp(440px,130vw,610px);margin-top:0;order:2}
+  .navid-portrait{height:101%;bottom:-10px;transform:translateX(-50%);animation:none}
+  .navid-hero-backtype{font-size:390px;left:23%;top:11%}.navid-hero-orbit{left:12%;width:76%;top:13%}
+  .navid-portrait-caption{left:20px;right:20px;justify-content:space-between;bottom:19px;font-size:8px}
+  .navid-scroll-cue{display:none}
+  .navid-story{padding:84px 0 100px}.navid-story h2,.navid-section-intro h2,.navid-foundation h2,.navid-philosophy h2,.navid-contact h2{font-size:clamp(38px,9.2vw,57px);line-height:1.08}
+  .navid-story-body{display:block}.navid-story-body p{font-size:14px;line-height:1.75;margin:0 0 18px}.navid-story-body .navid-story-first{font-size:19px;line-height:1.5}
+  .navid-principles{margin-top:44px}.navid-principles span{font-size:8px;letter-spacing:.08em;padding:16px 5px}
+  .navid-businesses{padding:90px 0}.navid-intro-row{grid-template-columns:1fr;gap:16px;margin:25px 0 34px}.navid-intro-row>p{font-size:14px;line-height:1.7}
+  .navid-business-grid{grid-template-columns:1fr;gap:15px}.navid-business-card{min-height:570px;padding:22px}
+  .navid-brandmark{height:205px}.navid-brandmark img{max-height:160px}.navid-card-property .navid-brandmark img{max-height:160px}.navid-card-finance .navid-brandmark img{max-height:155px}
+  .navid-card-bottom h3{font-size:clamp(35px,8.4vw,50px)}.navid-card-bottom p{font-size:13px;line-height:1.7}
+  .navid-foundation{padding:90px 0}.navid-foundation-grid{grid-template-columns:1fr;gap:42px}.navid-foundation-title h2{margin:26px 0;font-size:clamp(40px,9.2vw,60px)}.navid-foundation-title>p{font-size:14px}
+  .navid-credential{padding:22px 0}.navid-credential h3{font-size:17px}
+  .navid-philosophy{padding:90px 0}.navid-philosophy h2{margin:25px 0 47px}.navid-philosophy-grid{grid-template-columns:1fr;gap:22px}.navid-philosophy-grid>div{padding-top:20px}.navid-philosophy-grid h3{margin:15px 0 9px;font-size:29px}.navid-philosophy-grid p{font-size:14px}
+  .navid-contact{min-height:0;padding:100px 0 120px}.navid-contact-inner>p{font-size:14px}.navid-contact-actions{flex-direction:column;width:min(100%,380px)}.navid-pill{width:100%;justify-content:space-between;padding:16px 20px}.navid-contact-phone{flex-direction:column;gap:10px;margin-top:48px}.navid-contact-phone a{font-size:17px}
+  .navid-about-footer{padding:25px 15px}
+}
+@media (max-width:380px){.navid-hero h1{font-size:45px}.navid-hero-visual{min-height:430px;height:450px}.navid-hero-bottom{font-size:7px}.navid-section-index{font-size:9px}}
+@media (prefers-reduced-motion:reduce){.navid-portrait,.navid-scroll-cue>span:last-child{animation:none!important}.js-enhanced .about-premium-page [data-reveal]{opacity:1!important;transform:none!important}}
+
+/* V4: Career background presented as understated editorial evidence. */
+.navid-experience{margin-top:45px;border-top:1px solid rgba(255,255,255,.18);max-width:545px}
+.navid-experience-label{font-weight:600;letter-spacing:.18em;font-size:10px;color:#b19e82;margin:24px 0 14px}
+.navid-experience-row{display:flex;justify-content:space-between;align-items:baseline;gap:16px;padding:13px 0;border-bottom:1px solid rgba(255,255,255,.11)}
+.navid-experience-row span{font-size:12px;color:#9aa6a9}
+.navid-experience-row strong{font-weight:400;font-size:15px;color:#e5e6e3;text-align:right}
+@media(max-width:760px){.navid-experience{margin-top:30px}.navid-experience-label{font-size:9px}.navid-experience-row strong{font-size:13px}.navid-experience-row span{font-size:11px}}
+
+/* Keep the editorial hero headline comfortably inside its column on desktop. */
+@media(min-width:761px){.navid-hero h1{font-size:clamp(50px,5.5vw,88px);letter-spacing:-.07em}}
+
+
+/* V6 — About Navid only: fully centred mobile experience.
+   The original desktop/tablet styles are unchanged. */
+@media screen and (max-width: 760px) {
+  .about-premium-page .masthead {
+    box-sizing: border-box;
+    height: auto;
+    min-height: 98px;
+    padding: 17px 18px 15px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    text-align: center;
+  }
+  .about-premium-page .masthead .wordmark,
+  .about-premium-page .masthead .masthead-link {
+    margin-inline: auto;
+    justify-content: center;
+    text-align: center;
+    max-width: none;
+  }
+  .about-premium-page .masthead .wordmark {align-items: baseline;}
+  .about-premium-page .masthead .masthead-link {font-size: 11px;}
+  .about-premium-page .navid-shell,
+  .about-premium-page .navid-section-intro,
+  .about-premium-page .navid-story,
+  .about-premium-page .navid-businesses,
+  .about-premium-page .navid-foundation,
+  .about-premium-page .navid-philosophy,
+  .about-premium-page .navid-contact,
+  .about-premium-page .navid-about-footer {
+    text-align: center;
+  }
+  .about-premium-page .navid-hero-copy {text-align: center;align-items: center;}
+  .about-premium-page .navid-hero-lead {margin-inline: auto;}
+  .about-premium-page .navid-eyebrow,
+  .about-premium-page .navid-hero-bottom,
+  .about-premium-page .navid-text-link {justify-content: center;}
+  .about-premium-page .navid-story-side {text-align: center;}
+  .about-premium-page .navid-story-body {text-align: center;}
+  .about-premium-page .navid-story-body p,
+  .about-premium-page .navid-story-body .navid-story-first {
+    max-width: 540px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
+  .about-premium-page .navid-principles {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    margin-inline: auto;
+  }
+  .about-premium-page .navid-principles span,
+  .about-premium-page .navid-principles span:first-child,
+  .about-premium-page .navid-principles span:last-child {
+    text-align: center;
+    border-right: 0;
+  }
+  .about-premium-page .navid-principles span:not(:last-child) {border-bottom: 1px solid #c5c8c3;}
+  .about-premium-page .navid-intro-row {justify-items: center;}
+  .about-premium-page .navid-intro-row > p {margin-inline: auto;max-width: 420px;text-align: center;}
+  .about-premium-page .navid-business-card {text-align: center;align-items: center;}
+  .about-premium-page .navid-card-top {
+    align-self: center;
+    width: 100%;
+    justify-content: center;
+    flex-direction: column;
+    gap: 9px;
+    text-align: center;
+  }
+  .about-premium-page .navid-brandmark {width: 100%;justify-content: center;}
+  .about-premium-page .navid-card-bottom {align-self: stretch;text-align: center;}
+  .about-premium-page .navid-card-bottom h3,
+  .about-premium-page .navid-card-bottom p,
+  .about-premium-page .navid-card-category {text-align: center;margin-left: auto;margin-right: auto;}
+  .about-premium-page .navid-card-explore {justify-content: center;}
+  .about-premium-page .navid-foundation-title {text-align: center;}
+  .about-premium-page .navid-foundation-title > p,
+  .about-premium-page .navid-experience {margin-inline: auto;text-align: center;}
+  .about-premium-page .navid-experience-row {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    text-align: center;
+  }
+  .about-premium-page .navid-experience-row strong {text-align: center;}
+  .about-premium-page .navid-credential {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    gap: 10px;
+    text-align: center;
+  }
+  .about-premium-page .navid-credential-tag,
+  .about-premium-page .navid-credential-note {grid-column: 1;text-align: center;}
+  .about-premium-page .navid-credential > div,
+  .about-premium-page .navid-credential p,
+  .about-premium-page .navid-credential h3 {text-align: center;}
+  .about-premium-page .navid-philosophy h2 {margin-left: auto;margin-right: auto;text-align: center;}
+  .about-premium-page .navid-philosophy-grid > div,
+  .about-premium-page .navid-philosophy-grid p,
+  .about-premium-page .navid-philosophy-grid h3 {text-align: center;}
+  .about-premium-page .navid-philosophy-grid p {max-width: 460px;margin-inline: auto;}
+  .about-premium-page .navid-contact-inner,
+  .about-premium-page .navid-contact-actions,
+  .about-premium-page .navid-contact-phone {align-items: center;justify-content: center;text-align: center;}
+  .about-premium-page .navid-pill {justify-content: center;gap: 22px;text-align: center;}
+  .about-premium-page .navid-about-footer {align-items: center;justify-content: center;}
+  .about-premium-page .navid-about-footer > * {text-align: center;}
+}
