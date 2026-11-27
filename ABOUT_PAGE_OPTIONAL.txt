@@ -1,0 +1,3 @@
+If your About Navid page still shows the old PCB&T tab icon, open about-navid.html in GitHub, find the existing <link ... rel="icon" ...> line and replace it with:
+<link rel="icon" type="image/png" href="favicon-ng.png?v=1">
+The same favicon files in this package are used for About. Do not replace the rest of that page.
