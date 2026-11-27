@@ -1,57 +1,96 @@
 <!doctype html>
-<html lang="en">
+<html lang="en-CA">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#08090b">
-  <meta name="description" content="Navid Group — bringing together NAV's Property Management and Port City Bookkeeping & Tax Services.">
-  <title>Navid Group — Different disciplines. One standard.</title>
-  <link rel="preload" href="navid-portrait-transparent.png" as="image">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="color-scheme" content="dark">
+  <meta name="theme-color" content="#07090d">
+  <meta name="description" content="Navid Group — explore NAV’s Property Management and PCB&T Bookkeeping & Tax Services in Saint John, New Brunswick.">
+  <title>Navid Group — An Interactive Art Experience</title>
+  <link rel="preload" href="navid-art-property-building.webp" as="image">
   <link rel="stylesheet" href="site.css">
   <script defer src="site.js"></script>
 </head>
-<body class="home-page">
-  <div class="page-glow" aria-hidden="true"></div>
-  <div class="grain" aria-hidden="true"></div>
-  <header class="masthead">
-    <a href="index.html" class="wordmark" aria-label="Navid Group home"><span class="wordmark-main">NAVID</span><span class="wordmark-minor">GROUP</span></a>
-    <a href="about-navid.html" class="masthead-link">About Navid <span aria-hidden="true">↗</span></a>
-  </header>
+<body data-active="neutral">
+  <a class="skip-link" href="#worlds">Skip to businesses</a>
+  <div id="loading" class="loading-screen" aria-hidden="true">
+    <div class="loader-art"><span class="loader-glyph">N</span><span class="loader-slash"></span><span class="loader-glyph">G</span></div>
+    <div class="loader-foot"><span>ENTERING NAVID GROUP</span><span class="loader-progress">00</span></div>
+    <div class="loader-rail"><span></span></div>
+  </div>
+  <div id="exit-curtain" class="exit-curtain" aria-hidden="true"><span class="exit-icon">N/G</span></div>
+  <canvas id="ambient-canvas" aria-hidden="true"></canvas>
+  <div class="ambient-dust" aria-hidden="true"></div>
+  <div class="mouse-halo" aria-hidden="true"></div>
+  <div class="cursor-ring" aria-hidden="true"><span>ENTER ↗</span></div>
+  <div class="stage-lines" aria-hidden="true"><i></i><i></i><i></i><i></i></div>
 
-  <main id="main">
-    <section class="landing" aria-label="Explore Navid Group">
-      <h1 class="landing-title rise">Different disciplines.<br><em>One personal standard.</em></h1>
+  <div class="page-shell" id="top">
+    <header class="site-header reveal-on-load">
+      <a class="identity" href="#top" aria-label="Navid Group home">
+        <span class="identity-symbol">N<span>/</span>G</span>
+        <span class="identity-words">NAVID<br><small>GROUP</small></span>
+      </a>
+      <div class="header-coordinate"><span class="live-blink"></span> SAINT JOHN, NEW BRUNSWICK</div>
+      <div class="header-right"><a href="#worlds" class="header-explore">EXPLORE <span>↓</span></a><a href="about-navid.html" class="header-about transition-link">ABOUT NAVID <span>↗</span></a></div>
+    </header>
 
-      <div class="stage" id="stage">
-        <div class="stage-rule rule-left" aria-hidden="true"></div>
-        <div class="stage-rule rule-right" aria-hidden="true"></div>
-        <div class="stage-light" aria-hidden="true"></div>
+    <main>
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="hero-aura" aria-hidden="true"><div class="aura-outer"></div><div class="aura-inner"></div><div class="aura-core"></div><div class="aura-path"></div></div>
+        <div class="hero-topline reveal-on-load" style="--enter: .13s"><span class="line-deco"></span><span>THE NAVID GROUP</span><span class="line-deco"></span></div>
+        <div class="hero-title-wrap">
+          <h1 id="hero-title" class="hero-title" aria-label="NAVID GROUP">
+            <span class="name-row" aria-hidden="true"><span>N</span><span>A</span><span>V</span><span>I</span><span>D</span></span>
+            <span class="group-row" aria-hidden="true"><span class="group-rule"></span>GROUP<span class="group-rule"></span></span>
+          </h1>
+          <div class="hero-descriptor reveal-on-load" style="--enter:.53s"><span>PROPERTY MANAGEMENT</span><span class="cross-mark">✳</span><span>BOOKKEEPING &amp; TAX</span></div>
+        </div>
+        <div class="worlds-intro reveal-on-load" style="--enter:.7s"><span class="intro-line"></span><span>CHOOSE A DIRECTION</span><span class="intro-line"></span></div>
 
-        <a class="brand brand-navs" href="navs.html" aria-label="Explore NAV's Property Management">
-          <span class="brand-index">01 / PROPERTY</span>
-          <span class="brand-logo-wrap navs-logo-wrap"><img src="navs-logo-transparent.png" alt="NAV's Property Management Inc. — Live Easy, We Manage" class="navs-logo"></span>
-          <span class="brand-action"><span>Property management</span><span class="brand-arrow" aria-hidden="true">↗</span></span>
-        </a>
+        <div id="worlds" class="world-grid" aria-label="Choose a business">
+          <a href="https://alirezakhani91.github.io/navs-property/" class="world world-navs transition-link reveal-on-load" data-world="navs" aria-label="Visit NAV’s Property Management" style="--enter:.77s">
+            <div class="world-visual" aria-hidden="true"><img src="navid-art-property-building.webp" class="property-photo" alt=""><div class="architecture-lines"><i></i><i></i><i></i><i></i></div></div>
+            <div class="world-flare" aria-hidden="true"></div>
+            <div class="world-top"><span class="world-sequence">01 <em>—</em> PROPERTY</span><span class="world-corner">↗</span></div>
+            <div class="world-middle"><div class="logo-plate"><img src="navid-art-logo-navs.webp" alt="NAV’s Property Management Inc."></div></div>
+            <div class="world-bottom"><div><span class="world-kind">PROPERTY MANAGEMENT</span><h2>Spaces, cared for.</h2><small>ENTER NAV’S PROPERTY MANAGEMENT</small></div><span class="world-arrow" aria-hidden="true">↗</span></div>
+            <div class="world-vertical" aria-hidden="true">NAV'S PROPERTY MANAGEMENT</div>
+          </a>
 
-        <a class="portrait-link" href="about-navid.html" aria-label="Meet Navid — visit About Navid">
-          <span class="portrait-aurora" aria-hidden="true"></span>
-          <img class="portrait" src="navid-portrait-transparent.png" alt="Navid seated in a suit on a black executive chair" width="1122" height="1402" fetchpriority="high">
-          <span class="portrait-tag"><span class="portrait-tag-line"></span><span>MEET NAVID</span><span class="portrait-arrow" aria-hidden="true">↗</span></span>
-        </a>
+          <div class="world-center" aria-hidden="true">
+            <span class="center-sigil">/</span>
+            <span class="center-ring center-ring-one"></span><span class="center-ring center-ring-two"></span>
+            <span class="center-marker center-marker-top">N</span><span class="center-marker center-marker-bottom">G</span>
+          </div>
 
-        <a class="brand brand-pcbt" href="https://alirezakhani91.github.io/pcb-t/" aria-label="Visit PCB&T Bookkeeping and Tax Services">
-          <span class="brand-index">02 / FINANCE</span>
-          <span class="brand-logo-wrap pcbt-logo-wrap"><span class="pcbt-logo-stage"><img src="pcbt-logo-white.png" alt="PCB&T — A Wave Above the Rest" class="pcbt-logo"></span></span>
-          <span class="brand-action"><span>Bookkeeping &amp; tax</span><span class="brand-arrow" aria-hidden="true">↗</span></span>
-        </a>
-      </div>
+          <a href="https://alirezakhani91.github.io/pcb-t/" class="world world-pcbt transition-link reveal-on-load" data-world="pcbt" aria-label="Visit PCB&T Bookkeeping and Tax Services" style="--enter:.89s">
+            <div class="world-visual finance-visual" aria-hidden="true">
+              <div class="finance-sun"></div><div class="finance-orbit orbit-a"></div><div class="finance-orbit orbit-b"></div>
+              <svg class="finance-waves" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 650 550" preserveAspectRatio="xMidYMid slice"><defs><linearGradient id="wave-stroke" x1="0" x2="1" y1="0" y2="1"><stop stop-color="#4ac5c4"/><stop offset=".54" stop-color="#8ff4e7"/><stop offset="1" stop-color="#e7bb70"/></linearGradient></defs>
+              <g fill="none" stroke="url(#wave-stroke)" stroke-width="1.2" opacity=".47">
+                <path d="M-70 325 C125 220 210 435 405 330 S615 265 740 325"/><path d="M-70 345 C125 240 210 455 405 350 S615 285 740 345"/><path d="M-70 365 C125 260 210 475 405 370 S615 305 740 365"/><path d="M-70 385 C125 280 210 495 405 390 S615 325 740 385"/><path d="M-70 405 C125 300 210 515 405 410 S615 345 740 405"/><path d="M-70 425 C125 320 210 535 405 430 S615 365 740 425"/><path d="M-70 445 C125 340 210 555 405 450 S615 385 740 445"/><path d="M-70 465 C125 360 210 575 405 470 S615 405 740 465"/>
+              </g></svg>
+              <div class="finance-points"><span></span><span></span><span></span><span></span><span></span></div>
+            </div>
+            <div class="world-flare" aria-hidden="true"></div>
+            <div class="world-top"><span class="world-sequence">02 <em>—</em> FINANCE</span><span class="world-corner">↗</span></div>
+            <div class="world-middle"><div class="logo-plate pcbt-logo"><img src="navid-art-logo-pcbt.webp" alt="PCB&T — A Wave Above The Rest"></div></div>
+            <div class="world-bottom"><div><span class="world-kind">BOOKKEEPING &amp; TAX</span><h2>Numbers, in order.</h2><small>ENTER PCB&amp;T</small></div><span class="world-arrow" aria-hidden="true">↗</span></div>
+            <div class="world-vertical" aria-hidden="true">PCB&amp;T BOOKKEEPING &amp; TAX</div>
+          </a>
+        </div>
+        <div class="hero-footer reveal-on-load" style="--enter:1s"><span><span class="tiny-star">✳</span> TWO BUSINESSES · ONE PLACE TO BEGIN</span><a href="#about-preview" class="scroll-link"><span class="scroll-icon">↓</span> SCROLL TO MEET NAVID</a><span class="experience-label">MOVE YOUR CURSOR TO EXPLORE</span></div>
+      </section>
 
-      <div class="landing-bottom">
-        <span class="landing-center">Choose a direction to explore</span>
-        <span class="landing-small landing-small-right">NAVID GROUP <span aria-hidden="true">©</span> 2026</span>
-      </div>
-    </section>
-  </main>
-  <footer class="footer-min"><span>NAVID GROUP</span><span>Thoughtful business. Thoughtful property. Thoughtful people.</span><a href="about-navid.html">About Navid ↗</a></footer>
+      <section class="about-preview" id="about-preview" aria-labelledby="about-title">
+        <div class="about-grid-guide" aria-hidden="true"></div>
+        <div class="about-photo scroll-reveal" data-parallax=".04"><div class="portrait-glow"></div><span class="about-photo-number">03 / THE PERSON</span><img src="navid-art-portrait.webp" alt="Navid standing in a dark suit, smiling"><span class="portrait-bottom-line"></span></div>
+        <div class="about-copy scroll-reveal"><div class="small-kicker"><span class="small-diamond"></span> A LITTLE ABOUT NAVID</div><h2 id="about-title">Meet <i>Navid.</i></h2><p>Navid runs two Saint John businesses: PCB&T and NAV’s Property Management. Read a little about his background and the work each business does.</p><a class="about-button transition-link" href="about-navid.html"><span>MEET NAVID</span><span class="button-disc">↗</span></a><div class="about-decoration">N<span>.</span></div></div>
+      </section>
+    </main>
+
+    <footer class="site-footer"><a href="#top" class="footer-brand">NAVID <span>GROUP</span></a><div class="footer-center">SAINT JOHN, NEW BRUNSWICK · CANADA</div><div class="footer-right"><span>© <span id="year">2026</span></span><a href="#top" aria-label="Back to top">↑</a></div></footer>
+  </div>
 </body>
 </html>
