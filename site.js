@@ -90,12 +90,35 @@ cards.forEach(card=>{
 });
 const revealTargets=[...document.querySelectorAll('.scroll-reveal')];
 if('IntersectionObserver' in window){const obs=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('is-seen');obs.unobserve(entry.target)}}),{threshold:.13});revealTargets.forEach(t=>obs.observe(t))}else revealTargets.forEach(t=>t.classList.add('is-seen'));
+// Keep the exit transition, but never restore its full-screen curtain from BFCache.
+// Browsers can resume a previously visited page exactly as it looked on navigation away.
+const exitCurtain=document.getElementById('exit-curtain');
+let navigationTimer=null;
+function resetNavigationSurface(){
+ if(navigationTimer!==null){clearTimeout(navigationTimer);navigationTimer=null;}
+ exitCurtain?.classList.remove('out');
+ setMode('neutral');
+ cursor?.classList.remove('over-world','is-visible');
+ halo?.classList.remove('visible');
+ mouseVisible=false;
+ cards.forEach(card=>{card.style.transform='';card.style.setProperty('--px','50%');card.style.setProperty('--py','50%');});
+}
+// pagehide runs after the departure animation; clean state before the browser caches it.
+addEventListener('pagehide',()=>{exitCurtain?.classList.remove('out');});
+// pageshow runs when Back/Forward restores the document (unlike DOMContentLoaded).
+addEventListener('pageshow',event=>{
+ if(event.persisted || exitCurtain?.classList.contains('out')){
+  resetNavigationSurface();
+  body.classList.add('ready');
+  loader?.classList.add('is-gone');
+ }
+});
 if(!reduce)document.querySelectorAll('a.transition-link').forEach(link=>link.addEventListener('click',e=>{
  if(e.defaultPrevented||e.button!==0||e.metaKey||e.ctrlKey||e.shiftKey||e.altKey)return;
  const url=link.getAttribute('href');if(!url||url.startsWith('#'))return;
  e.preventDefault();
- const curtain=document.getElementById('exit-curtain');curtain.classList.add('out');
- setTimeout(()=>{location.href=url},600);
+ exitCurtain?.classList.add('out');
+ navigationTimer=setTimeout(()=>{navigationTimer=null;location.href=url},600);
 }));
 document.getElementById('year').textContent=new Date().getFullYear();
 addEventListener('blur',()=>{setMode('neutral');halo.classList.remove('visible');cursor.classList.remove('is-visible');mouseVisible=false});
